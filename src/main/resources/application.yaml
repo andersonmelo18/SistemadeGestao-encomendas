@@ -1,6 +1,6 @@
 spring:
   application:
-    name: assistencia
+    name: sistemadegestao
 
   profiles:
     active: local

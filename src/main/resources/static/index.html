@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183d35"><title>Encomendas · Gestão de pedidos</title>
+  <link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <section id="login-screen" class="login-layout">
+    <div class="intro"><span class="brand-mark">E</span><p class="eyebrow">GESTÃO DE ENCOMENDAS</p><h1>Do primeiro pedido<br>à última etapa.</h1><p>Atendimento e produção no mesmo fluxo.<br>Cada pessoa acompanha o que precisa.</p><div class="sample-track"><span>Em análise</span><span>Na fila</span><span>Em produção</span></div></div>
+    <div class="login-card"><p class="eyebrow">BEM-VINDO</p><h2>Acesse seu painel</h2><p class="muted">Use o celular e a senha do seu cadastro.</p><form id="login-form"><label>Celular com DDD<input name="celular" type="tel" inputmode="numeric" autocomplete="username" maxlength="20" required placeholder="83 99999-0000"></label><label>Senha<input name="senha" type="password" autocomplete="current-password" required></label><p id="login-error" class="error" role="alert"></p><button class="primary" type="submit">Entrar</button></form><p class="hint">Seu painel é definido pelo perfil de acesso.</p></div>
+  </section>
+  <div id="app" hidden>
+    <aside class="sidebar"><a class="brand" href="/"> <span class="brand-mark">E</span> Encomendas</a><p class="nav-caption">ÁREA DE TRABALHO</p><nav id="navigation" aria-label="Painéis"></nav><div class="account"><strong id="account-name"></strong><span id="account-role"></span><button id="logout" class="ghost">Sair da conta</button></div></aside>
+    <main><header class="page-header"><div><p class="eyebrow" id="area-label"></p><h1 id="page-title"></h1><p id="page-description" class="muted"></p></div><div id="page-actions" class="actions"></div></header><div id="notice" role="status" aria-live="polite" hidden></div><section id="content" aria-label="Conteúdo do painel"></section></main>
+  </div>
+  <dialog id="modal"><div class="modal-head"><h2 id="modal-title"></h2><button id="close-modal" class="icon-button" aria-label="Fechar janela">×</button></div><div id="modal-body"></div><p id="modal-error" class="error" role="alert"></p></dialog>
+</body>
+</html>

@@ -1,0 +1,10 @@
+ALTER TABLE clientes ALTER COLUMN cpf DROP NOT NULL;
+ALTER TABLE clientes ALTER COLUMN email DROP NOT NULL;
+ALTER TABLE clientes ADD COLUMN celular VARCHAR(11);
+ALTER TABLE clientes ADD CONSTRAINT uk_clientes_celular UNIQUE (celular);
+ALTER TABLE usuarios ALTER COLUMN email DROP NOT NULL;
+ALTER TABLE usuarios ADD COLUMN celular VARCHAR(11);
+ALTER TABLE usuarios ADD COLUMN cliente_id BIGINT;
+ALTER TABLE usuarios ADD CONSTRAINT uk_usuarios_celular UNIQUE (celular);
+ALTER TABLE usuarios ADD CONSTRAINT uk_usuarios_cliente UNIQUE (cliente_id);
+ALTER TABLE usuarios ADD CONSTRAINT fk_usuarios_cliente FOREIGN KEY (cliente_id) REFERENCES clientes(id);
