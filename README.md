@@ -2,6 +2,14 @@
 
 Aplicação Java 21 com Spring Boot, Spring Security, JPA e Flyway. Inclui uma interface HTML/CSS/JavaScript servida pela própria aplicação.
 
+## Integrantes
+
+- Anderson Melo de Andrade
+- Eduardo Cabral
+- Gustavo Chagas do Nascimento
+- Paulo Cezar de Medeiros
+- Pedro Jorge Romero
+
 ## Funcionalidades
 
 - Cadastro de clientes com celular e senha protegida por BCrypt.
